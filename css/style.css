@@ -1,0 +1,280 @@
+/** Font face start */
+@font-face {
+    font-family: 'Shantell Sans';
+    src: url("../fonts/static/ShantellSans-Regular.ttf") format(truetype);
+}
+/** Font face end */
+
+/** Defoult style start */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: 'Shantell Sans', cursive;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/** Defoult style end */
+
+/** Header style start */
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 33vh;
+}
+.music-player{
+    width: 50%;
+}
+.navigation-music{
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+.action-btn{
+    text-align: center;
+    background-color: transparent;
+    color: white;
+    outline: none;
+    border: solid 4px white;
+    font-size: 16px;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin-right: 8px;
+}
+.action-btn:hover{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border:  solid 4px black;
+    transition: 0.75s;
+}
+#play{
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+}
+.songs-title{
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+#songs-title-btn{
+    display: block;
+    background-color: transparent;
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    font-family:  'Shantell Sans', cursive;
+}
+#songs-title-btn:hover{
+    cursor: pointer;
+}
+.weather{
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    justify-content: flex-end;
+}
+.weather form{
+    width: 50.1%;
+}
+#weatherInput{
+    background-color: transparent;
+    border: none;
+    width: 90%;
+    margin-top: 1rem;
+    height: 40px;
+    outline: none;
+    border-bottom: solid 2px white;
+    font-size: 18px;
+    color: white;
+    font-family: 'Shantell Sans', cursive;
+    font-weight: bold;
+}
+.weather-atribute{
+    width: 50.1%;
+}
+#weather-icon{
+    font-size: 30px;
+}
+.weather p {
+    margin-top: 10px;
+}
+
+/** Header style end */
+
+/** Main style start */
+main{
+    width: 100%;
+    height: 34vh;
+    position: relative;
+}
+.time{
+    width: 100%;
+    text-align: center;
+}
+#hour{
+    font-size: 100px;
+    color: white;
+}
+#day{
+    font-size: 25px;
+    color: white;
+    margin-top: -5px;
+}
+#time-day{
+    color: white;
+    display: inline;
+    font-size: 40px;
+}
+#name{
+    background-color: transparent;
+    border: none;
+    width: 350px;
+    height: 50px;
+    outline: none;
+    font-size: 40px;
+    color: white;
+    font-family: 'Shantell Sans', cursive;
+    font-weight: bold;
+
+}
+#name::-webkit-input-placeholder{
+    font-size: 25px;
+}
+.action-bg{
+    position: absolute;
+    background-color: transparent;
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 30px; 
+}
+#prev-bg{
+    left: 2rem;
+    top: 50%;
+}
+#next-bg{
+    right: 2rem;
+    top: 50%;
+}
+.action-bg:hover{
+    cursor: pointer;
+}
+/** Main style end */
+
+/** Footer style start */
+footer{
+    width: 100%;
+    height: 33vh;
+    text-align: center;
+}
+
+.status{
+    margin-top: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+#refresh-status{
+    margin-top: 100px;
+    background-color: transparent;
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 35px;
+}
+#refresh-status:hover{
+    cursor: pointer;
+}
+/** Footer style end */
+
+/** Media quary start */
+@media screen and (max-width:991.9px) and (min-width:0px){
+    .music-player{
+        width: 63%;
+    }
+    .weather{
+        width: 37%;
+    }
+    body{
+        height: auto;
+    }
+    header{
+        height: auto;
+    }
+    main {
+    
+        margin-top: 30px;
+        height: auto;
+    }
+    footer{
+        height: auto;
+        padding-bottom: 2rem;
+    }
+}
+@media screen and (max-width:767.9px) and (min-width:0px){
+    body{
+        height: auto;
+    }
+    header{
+        height: auto;
+    }
+    main {
+    
+        margin-top: 30px;
+        height: auto;
+    }
+    footer{
+        height: auto;
+        padding-bottom: 2rem;
+    }
+    .music-player{
+        width: 100%;
+        text-align: center;
+    }
+    .weather{
+        order: -1;
+        margin-left: 1rem;
+        width: 100%;
+        justify-content: flex-start;
+    }
+    #hour{
+        font-size: 60px;
+    }
+    .time{
+        text-align: center;
+    }
+    #name{
+        width: 80%;
+        font-size: 40px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    #songs-title-btn{
+        font-size: 14px;
+    }
+    .status{
+        font-size: 16px;
+    }
+    .songs-title{
+        margin-left: 1rem;
+    }
+    #prev-bg{
+        left: 1rem;
+
+    }
+    #next-bg{
+        right: 1rem;
+    }
+}
+/** Media quary end */

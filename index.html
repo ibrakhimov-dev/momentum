@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--* Meta Start -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="descreption" content="Momentum: Enjoy the beautiful view of nature and soft music">
+    <meta name="keywords" content="momentum, nature, music, watch, clock, calendar, word, motivation">
+    <link rel="icon" href="https://cdn.onlinewebfonts.com/svg/download_45334.png">
+    <meta name="author" content="Shermuhammad Ibrohimov"> 
+    <!--* Meta End -->
+    <!--* Font Awesome Link Start -->
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" 
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+    <!--* Font Awesome Link End -->
+    <!--* Title Start -->
+    <title>Momentum-clone | Shermuhammad Ibrohimov</title>
+    <!--* Title End -->
+    <!--* Css File Start -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!--* Css File End -->
+</head>
+<body onload="startTime()">
+    <!--* Header Start -->
+    <header>
+        <div class="music-player" id="music-player">
+            <audio id="music"></audio>
+            <div class="navigation-music">
+                <button id="prev" class="action-btn" onclick="prev()"><i class="fa-solid fa-backward"></i></button>
+                <button id="play" class="action-btn" onclick="play()"><i class="fa-solid fa-play"></i></button>
+                <button id="next" class="action-btn" onclick="next()"><i class="fa-solid fa-forward"></i></button>
+            </div>
+            <div class="songs-title" id="songs-title">
+                <button id="songs-title-btn"><i class="fa-solid fa-music" id="music-icon" ></i> Billie Eilish, Khalid - Lovely</button>
+                <button id="songs-title-btn"><i class="fa-solid fa-music" id="music-icon" ></i> Sevak - Жди меня там</button>
+                <button id="songs-title-btn"><i class="fa-solid fa-music" id="music-icon" ></i> AURORA - Runaway</button>
+                <button id="songs-title-btn"><i class="fa-solid fa-music" id="music-icon" ></i> Jony, HammAli - Наверно ты меня не помнишь</button>
+            </div>
+        </div>
+        <div class="weather">
+            <form action="#">
+                <div>
+                    <input type="text" 
+                    name="weatherInput" 
+                    id="weatherInput" 
+                    autocomplete="off"
+                    placeholder="[Enter city]"
+                    onkeyup="getWeather()">
+                </div>
+            </form>
+            <div class="weather-atribute">
+                <p><i id="weather-icon" class="fa-solid fa-cloud"></i></p>
+                <p id="temperatura"></p>
+                <p id="wind-speed"></p>
+                <p id="humidity"></p>
+            </div>
+        </div>
+    </header>
+    <!--* Header End -->
+    <!--* Main Start -->
+    <main>
+        <button id="prev-bg" class="action-bg" onclick="prevBgImg(timeDate)"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="time">
+            <h1 id="hour"></h1>
+            <p id="day"></p>
+            <form action="#" autocomplete="off">
+                <div>
+                    <h3 id="time-day"></h3>
+                    <input type="text" name="name" id="name" 
+                    autocomplete="off"
+                    placeholder="[Enter name]">
+                </div>
+            </form>
+        </div>
+        <button id="next-bg" class="action-bg"><i class="fa-solid fa-chevron-right"></i></button>
+    </main>
+    <!--* Main End -->
+    <!--* Footer Start -->
+    <footer>
+        <button id="refresh-status" onclick="refreshStatus()"><i class="fa-solid fa-arrows-rotate"></i></button>
+        <p id="status-text" class="status"></p>
+        <p id="status-author" class="status"></p>
+    </footer>
+    <!--* Footer End -->
+    <!--* Js File Start -->
+    <script src="./js/main.js"></script>
+    <!--* Js File End -->
+</body>
+</html>
